@@ -110,7 +110,7 @@ function setAxiosInterceptors($axios) {
 /**
  * Cancels all requests that include a given resource and method.
  */
-function cancelPendingRequestsByResource(resource: string, method?: HttpMethod) {
+function cancelPendingRequestsByResource(resource, method) {
   const [resourceWithoutQuery] = resource.split("?");
 
   const targetKeys = Array.from(pendingRequests.keys()).filter((key) => {
@@ -163,7 +163,7 @@ function keysToCamelCase(data) {
 /**
  * Converts all keys in an object or array from camelCase to snake_case.
  */
-function keysToSnakeCase(data: unknown): unknown {
+function keysToSnakeCase(data) {
   if (isArray(data)) {
     return data.map((v) => keysToSnakeCase(v));
   } else if (isObject(data)) {
@@ -180,7 +180,7 @@ function keysToSnakeCase(data: unknown): unknown {
 /**
  * Converts all keys in a query string from camelCase to snake_case.
  */
-function urlQueryToSnakeCase(url: string) {
+function urlQueryToSnakeCase(url) {
   const [baseUrl, queries] = url.split("?");
 
   if (!queries) return url;
