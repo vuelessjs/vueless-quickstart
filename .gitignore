@@ -1,0 +1,32 @@
+# General
+.DS_Store
+node_modules
+dist
+storybook-static
+
+# ENV files
+.env
+.env.local
+.env.*.local
+
+# Log and cache files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Rollup build Report file
+report.html
+
+# Unplugin-vue-components typescript module decloration
+components.d.ts
