@@ -53,7 +53,7 @@ export default [
   },
   {
     name: "vueless-component-config",
-    files: [".vueless/*.config.js"],
+    files: [".vueless/configs/*.js", ".vueless/**/config.js"],
     rules: {
       "vue/max-len": ["error", { code: 140 }],
       "prettier/prettier": ["warn", { printWidth: 130 }],
